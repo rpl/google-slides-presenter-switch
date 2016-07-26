@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Google Slides Presenter Switch",
+  "version": "0.1.0",
+  "page_action": {
+    "browser_style": true,
+    "default_icon": {
+      "19": "icons/icon--19.png",
+      "38": "icons/icon-38.png"
+    },
+    "default_title": "Google Slides Presenter Switch"
+  },
+  "permissions": [],
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/presentation/d/*"],
+      "js": ["detect-google-presentation.js"]
+    }
+  ]
+}
