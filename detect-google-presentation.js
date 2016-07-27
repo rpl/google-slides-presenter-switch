@@ -1,5 +1,3 @@
-console.log("content script LOADED");
-
 let isPresentMode = window.location.href.includes("present#slide=");
 
 // Workaround for content script running before the background page is started.
@@ -21,7 +19,7 @@ chrome.runtime.sendMessage({
 }, retrySendMessage);
 
 chrome.runtime.onMessage.addListener((msg) => {
-  // toggle mode
+  // Toggle present/edit mode
   if (msg == "toggle-present") {
     if (isPresentMode) {
       window.location = `${location.pathname.replace(/present$/, "edit")}${location.hash}`;

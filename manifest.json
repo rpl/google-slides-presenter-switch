@@ -10,7 +10,7 @@
     },
     "default_title": "Google Slides Presenter Switch"
   },
-  "permissions": [],
+  "permissions": ["webNavigation"],
   "background": {
     "scripts": [ "background.js" ]
   },
