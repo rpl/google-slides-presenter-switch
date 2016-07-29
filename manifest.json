@@ -3,7 +3,6 @@
   "name": "Google Slides Presenter Switch",
   "version": "0.1.0",
   "page_action": {
-    "browser_style": true,
     "default_icon": {
       "19": "icons/icon-19.png",
       "38": "icons/icon-38.png"
@@ -19,5 +18,14 @@
       "matches": ["https://docs.google.com/presentation/d/*"],
       "js": ["detect-google-presentation.js"]
     }
-  ]
+  ],
+  "icons": {
+    "48": "icons/icon-38.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "google-slides-presenter-switch@ubik.cc",
+      "strict_min_version": "47.0"
+    }
+  }
 }
